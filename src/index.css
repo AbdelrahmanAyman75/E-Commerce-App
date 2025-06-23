@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #FFFADC;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+:root
+{
+    --main-color:#0aad0a;
+    --light-color:#f0f3f2;
+    --shadow: rgba(145,158,171,.2) 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
+    font-family: "Inter", sans-serif;
+    --rating-color:#ffc908;
+}
+/* check user online or no */
+.Network{
+position: absolute;
+background-color: #0aad0a;
+color: white;
+
+}
+body{
+    font-family: var(--font-family) !important;
+}
+.rating-color
+{
+    color: var(--rating-color);
+}
+.cursor-pointer
+{
+    cursor: pointer;
+}
+a , a:hover{
+    color: black !important;
+    text-decoration: none !important;
+}
+.a , .a:hover{
+    color: black !important;
+    text-decoration: none !important;
+}
+.product{
+ box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+ height: 100%;
+}
+.product:hover .product-show
+{
+    box-shadow: var(--shadow);
+    transition: all 0.5s ease-out;
+    opacity: 1;
+    right: 10px;
+
+    
+}
+.product-show {
+    position: absolute;
+    top: 30px;
+    bottom: 225px;
+    right: -40px;
+    background-color: #0000005f;
+    width: 43px;
+    transition: all 0.5s ease-out;
+    opacity: 0;
+}
+
+.items{
+  display: flex;
+  height: 100%;
+  place-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.product .btn 
+{
+  color: white;
+}
+.product:hover .btn 
+{
+    opacity: 1;
+    transform: translateY(0%);
+}
+.font-sm
+{
+    font-size: 14px;
+}
+.text-main
+{
+    color: var(--main-color);
+}
+.bg-main
+{
+    background-color: var(--main-color) !important;
+}
+.bg-main-light 
+{
+    background-color: var(--light-color) !important;
+}
+.btn-main{
+  background-color: var(--main-color) !important;
+  color:white !important;  
+}
+.btn-main:hover{
+  background-color:white !important;
+  color:#000 !important;
+  border: 2px solid var(--main-color) !important ;
+  transition: all 0.5s ease-in;
+  
+}
+.cart{
+  color: white;
+}
+
+.loader {
+    width: 50px;
+    height: 165px;
+    position: relative;
+  }
+  .loader::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50% , 0);
+    width: 16px;
+    height: 16px;
+    background: #FF3D00;
+    border-radius: 50%;
+    animation: bounce 2s linear infinite;
+  }
+.slick-next::before , .slick-prev:before{
+  font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: rgb(79, 73, 73) !important;
+    -webkit-font-smoothing: antialiased;
+}
+  .loader::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 48px;
+    width: 48px;
+    background: var(--main-color);
+    border-radius: 4px;
+    animation: rotate 2s linear infinite;
+  }
+  /* .container{
+    width: 90% !important;
+  } */
+  @keyframes bounce {
+    0% , 50% , 100%{
+    transform: translate(-50%, 0px);
+    height: 20px;
+    }
+    20% {
+      transform: translate(-25%, 85px);
+      height: 28px;
+    }
+    25% {
+      transform: translate(-25%, 110px);
+      height: 12px;
+    }
+    70% {
+      transform: translate(-75%, 85px);
+      height: 28px;
+    }
+    75% {
+      transform: translate(-75%, 108px);
+      height: 12px;
+    }
+  }
+  @keyframes rotate {
+    0% , 50% , 100%{ transform: rotate(0deg)}
+    25% { transform: rotate(90deg)}
+    75%{ transform: rotate(-90deg)}
+  }
+  .navegate{
+    color: #219ebc;
+  }
+  /* forms */
+  .form{
+    width: 25% !important;
+    margin: auto;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 15px;
+  }
+  .hover-card{
+    position: absolute;
+    top: 0;
+  }
+
+  @media only screen and (max-width: 600px) {
+.form{
+    width: 65% !important;
+}
+
+.container{
+  width: 80% !important;
+}
+}
